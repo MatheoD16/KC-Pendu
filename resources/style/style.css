@@ -19,6 +19,22 @@ body{
 
 }
 
+#clavier{
+    font-size: larger;
+}
+
+.pendu-img{
+    width: 15%;
+}
+
+#hidden_word{
+    font-size: 175%;
+}
+
+.btn-medium {
+    font-size: 75%;
+}
+
 @media (max-width: 767.98px) {
     .logo-kc{
         width: 15%;
