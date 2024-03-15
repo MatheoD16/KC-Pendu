@@ -1,0 +1,48 @@
+body{
+    background-color: #0d1015;
+    color: white;
+}
+.bg-kc{
+    background-color: #0d1015;
+}
+
+.logo-kc{
+    width: 20%;
+
+    min-width: 65px; /* Largeur minimale de l'image */
+}
+
+.titre{
+    font-family: Cairo, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+    font-style: normal;
+    text-shadow: white;
+
+}
+
+#clavier{
+    font-size: larger;
+}
+
+.pendu-img{
+    width: 15%;
+}
+
+#hidden_word{
+    font-size: 175%;
+}
+
+.btn-medium {
+    font-size: 75%;
+}
+
+@media (max-width: 767.98px) {
+    .logo-kc{
+        width: 15%;
+    }
+
+    .div-logo-kc{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

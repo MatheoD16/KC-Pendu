@@ -9,13 +9,39 @@
       href="/node_modules/bootstrap/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <link
+      href="/resources/style/style.css"
+      rel="stylesheet"
+    >
     <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   </head>
   <body>
-    <h1>KC-Pendu</h1>
+    <header class="border border-black text-white rounded-bottom bg-black">
+      <div class="container">
+        <div class="row">
 
-    <p>Bienvenue sur le jeu du pendu version KC.</p>
+      <div class="col-sm div-logo-kc">
+        <a href="/">
+        <img class="rounded m-3 logo-kc" src="resources/images/kc-logo.svg">
+        </a>
+      </div>
 
-    <a href="/game"><button class="btn btn-primary">test</button></a>
+      <div class="col-sm">
+      <h1 class="text-center p-4 titre">KC Pendu</h1>
+      </div>
+
+          <div class="col-sm"></div>
+
+        </div>
+      </div>
+    </header>
+
+    <div class="container-fluid">
+      <div class="text-center">
+    <h3 class="pt-5 mt-5">Bienvenue sur le jeu du pendu version KC.</h3>
+        <p class="pt-1">⚠️C'est n'est encore qu'une première version⚠️</p>
+    <a href="/game"><button class="btn mt-2 btn-primary">Jouer</button></a>
+    </div>
+    </div>
   </body>
 </html>

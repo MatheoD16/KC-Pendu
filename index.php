@@ -8,7 +8,7 @@ switch($request_uri){
         break;
 
     case '/game':
-        require 'view/game.html';
+        require 'resources/view/game.html';
         break;
     default:
         http_response_code(404);
