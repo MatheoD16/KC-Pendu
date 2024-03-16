@@ -1,6 +1,6 @@
 import { Button } from "./button.js";
 export class Keyboard {
-  #listButtons;
+  listButtons;
 
   constructor() {
     this.listButtons = [];
@@ -13,7 +13,7 @@ export class Keyboard {
 
   display() {
     this.listButtons.forEach(function (item) {
-      console.log(item._id);
+      console.log(item.id);
     });
   }
 }
