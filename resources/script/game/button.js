@@ -1,21 +1,25 @@
 export class Button {
-  #id;
-  #used;
+  id;
+  used;
+  inWord;
 
   constructor(id) {
-    this._used = false;
-    this._id = id;
+    this.used = false;
+    this.id = id;
+    this.inWord = false;
   }
 
-  get id() {
-    return this._id;
+  disableRed() {
+    const element = document.getElementById(this.id);
+    element.classList.remove("btn-light");
+    element.classList.add("btn-danger");
+    this.used = true;
   }
 
-  get used() {
-    return this._used;
-  }
-
-  set used(value) {
-    this._used = value;
+  disableGreen() {
+    const element = document.getElementById(this.id);
+    element.classList.remove("btn-light");
+    element.classList.add("btn-success");
+    this.used = true;
   }
 }
