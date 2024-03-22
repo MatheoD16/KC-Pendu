@@ -12,41 +12,11 @@ export class Keyboard {
 
   }
 
-
   display() {
     this.listButtons.forEach(function (item) {
       console.log(item.id);
     });
   }
-
-  // isInWord(word, btn) {
-  //   const char = document.getElementById(btn.id).textContent.trim();
-  //   for (let letter of word) {
-  //     if (char === letter) {
-  //       return [true, letter];
-  //     }
-  //   }
-  //   return [false, null];
-  // }
-
-  // checkClickedButton(button){
-  //   const check = this.isInWord(this.hiddenWord, button)
-  //   button.inWord = check[0]
-  //   if (button.inWord){
-  //
-  //     button.disableGreen();
-  //   }
-  //   else{
-  //     button.disableRed();
-  //   }
-  // }
-
-  // addEventToButton() {
-  //   for (let button of this.listButtons) {
-  //     let btn = document.getElementById(button.id);
-  //     btn.addEventListener("click", this.checkClickedButton.bind(this, button));
-  //   }
-  // }
 
 
 }

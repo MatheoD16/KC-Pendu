@@ -1,7 +1,6 @@
 import { data } from "../../../data/data.js";
 import { Keyboard } from "./keyboard.js";
 
-//const fs= require('fs');
 const path = "./data/data.json";
 
 export class Game {
