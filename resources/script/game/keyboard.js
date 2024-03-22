@@ -1,7 +1,6 @@
 import { Button } from "./button.js";
 export class Keyboard {
   listButtons;
-  hiddenWord;
 
   constructor() {
     this.listButtons = [];
@@ -11,7 +10,6 @@ export class Keyboard {
       this.listButtons.push(btn);
     }
 
-    this.addEventToButton();
   }
 
 
@@ -21,32 +19,34 @@ export class Keyboard {
     });
   }
 
-  isInWord(word, btn) {
-    const char = document.getElementById(btn.id).textContent.trim();
-    for (let letter of word) {
-      if (char === letter) {
-        return true;
-      }
-    }
-    return false;
-  }
+  // isInWord(word, btn) {
+  //   const char = document.getElementById(btn.id).textContent.trim();
+  //   for (let letter of word) {
+  //     if (char === letter) {
+  //       return [true, letter];
+  //     }
+  //   }
+  //   return [false, null];
+  // }
 
-  checkClickedButton(button){
-    button.inWord = this.isInWord(this.hiddenWord, button)
-    if (button.inWord){
-      button.disableGreen();
-    }
-    else{
-      button.disableRed();
-    }
-  }
+  // checkClickedButton(button){
+  //   const check = this.isInWord(this.hiddenWord, button)
+  //   button.inWord = check[0]
+  //   if (button.inWord){
+  //
+  //     button.disableGreen();
+  //   }
+  //   else{
+  //     button.disableRed();
+  //   }
+  // }
 
-  addEventToButton() {
-    for (let button of this.listButtons) {
-      let btn = document.getElementById(button.id);
-      btn.addEventListener("click", this.checkClickedButton.bind(this, button));
-    }
-  }
+  // addEventToButton() {
+  //   for (let button of this.listButtons) {
+  //     let btn = document.getElementById(button.id);
+  //     btn.addEventListener("click", this.checkClickedButton.bind(this, button));
+  //   }
+  // }
 
 
 }
