@@ -13,12 +13,24 @@ export class Game {
     this.hiddenWord = this.RandomHiddenWord();
     this.keyBoard = new Keyboard();
     this.tries = 8;
+    this.keyBoard.hiddenWord = this.hiddenWord;
     this.generateHiddenWordInView();
   }
 
+  // //Todo J'ai fais de la D avec le méthodes pour disable dans keyboard (pas possible d'y accéder il faut les changer de fichier)
+  // checkClickedButton() {
+  //   this.keyBoard.listButtons.forEach(function (item) {
+  //     let btn = document.getElementById(item.id);
+  //     btn.addEventListener("click", function () {
+  //       const inWord = isInWord(this.hiddenWord, item);
+  //     });
+  //   });
+  // }
+
   RandomHiddenWord() {
     const key = Math.floor(Math.random() * Object.keys(data).length);
-    return data[key];
+    const word = String(data[key])
+    return word.toUpperCase();
   }
 
   generateHiddenWordInView() {
