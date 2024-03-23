@@ -1,22 +1,42 @@
 import { data } from "../../../data/data.js";
 import { Keyboard } from "./keyboard.js";
 
-const path = "./data/data.json";
-
 export class Game {
   hiddenWord;
   keyBoard;
   tries;
+  hiddenLetter;
 
   constructor() {
     this.hiddenWord = this.RandomHiddenWord();
     this.keyBoard = new Keyboard();
     this.tries = 8;
-    this.keyBoard.hiddenWord = this.hiddenWord;
-    this.generateHiddenWordInView();
+    this.hiddenLetter = [];
 
+    for (let letter of this.hiddenWord){
+      this.hiddenLetter.push(false);
+    }
+
+    this.generateHiddenWordInView();
     this.addEventToButton();
+    this.displayTries();
   }
+  //Tries
+
+  displayTries(){
+    const img = document.getElementById("image-bw");
+    img.src = "/resources/images/blue_wall_"+this.tries+".jpg"
+    //TODO Mettre image pour 0 essaies et faire la même pour quand on gagne.
+
+    const element = document.getElementById("game-count");
+    if (this.tries <= 0){
+      element.textContent = "Vous avec perdu ! La personne à trouver était "+this.hiddenWord
+    }
+    else {
+      element.textContent = "Il vous reste " + this.tries + " tentatives";
+    }
+  }
+
 
   //KeyBoard/Button
   isInWord(word, btn) {
@@ -29,15 +49,27 @@ export class Game {
     return [false, null];
   }
 
-  checkClickedButton(button){
-    const check = this.isInWord(this.hiddenWord, button)
-    button.inWord = check[0]
-    if (button.inWord){
-
-      button.disableGreen();
+  checkWordFound(){
+    for (let find of this.hiddenLetter){
+      if (! find){
+        return find
+      }
     }
-    else{
-      button.disableRed();
+    return true;
+  }
+
+  checkClickedButton(button){
+    if ((this.tries > 0) && (! this.checkWordFound()) && (! button.used)) {
+      const check = this.isInWord(this.hiddenWord, button)
+      button.inWord = check[0]
+      if (button.inWord) {
+        button.disableGreen();
+        this.displayChar(button);
+      } else {
+        this.tries --;
+        this.displayTries();
+        button.disableRed();
+      }
     }
   }
 
@@ -50,6 +82,28 @@ export class Game {
 
 
   //HiddenWord
+
+  getCharsIndex(button){
+    const letter = document.getElementById(button.id).textContent.trim();
+    let chars = [];
+    for (let i = 0 ; i < this.hiddenWord.length; i++){
+      if (this.hiddenWord[i] === letter){
+        chars.push(i);
+      }
+    }
+    return chars;
+  }
+
+  displayChar(button){
+    const index = this.getCharsIndex(button);
+    for (let i of index){
+      let field = document.getElementById("char-"+i);
+      field.textContent = this.hiddenWord[i];
+      this.hiddenLetter[i] = true;
+    }
+  }
+
+
   RandomHiddenWord() {
     const key = Math.floor(Math.random() * Object.keys(data).length);
     const word = String(data[key])
@@ -72,4 +126,7 @@ export class Game {
     cell.setAttribute("class", "p-1");
     return cell;
   }
+
+
+
 }

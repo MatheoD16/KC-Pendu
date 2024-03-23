@@ -12,11 +12,6 @@ export class Keyboard {
 
   }
 
-  display() {
-    this.listButtons.forEach(function (item) {
-      console.log(item.id);
-    });
-  }
 
 
 }
