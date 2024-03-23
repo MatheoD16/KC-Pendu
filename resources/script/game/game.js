@@ -25,15 +25,20 @@ export class Game {
 
   displayTries(){
     const img = document.getElementById("image-bw");
-    img.src = "/resources/images/blue_wall_"+this.tries+".jpg"
-    //TODO Mettre image pour 0 essaies et faire la même pour quand on gagne.
-
     const element = document.getElementById("game-count");
-    if (this.tries <= 0){
-      element.textContent = "Vous avec perdu ! La personne à trouver était "+this.hiddenWord
+
+    if (this.checkWordFound()){
+      img.src = "/resources/images/blue_wall_win.jpg";
+      element.textContent = "Bravo vous avez gagné !"
     }
     else {
-      element.textContent = "Il vous reste " + this.tries + " tentatives";
+      img.src = "/resources/images/blue_wall_" + this.tries + ".jpg";
+
+      if (this.tries <= 0) {
+        element.textContent = "Vous avec perdu ! La personne à trouver était " + this.hiddenWord
+      } else {
+        element.textContent = "Il vous reste " + this.tries + " tentatives";
+      }
     }
   }
 
@@ -67,10 +72,10 @@ export class Game {
         this.displayChar(button);
       } else {
         this.tries --;
-        this.displayTries();
         button.disableRed();
       }
     }
+    this.displayTries();
   }
 
   addEventToButton() {
