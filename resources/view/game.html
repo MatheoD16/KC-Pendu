@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>KC-Pendu</title>
 
     <link
       href="/node_modules/bootstrap/dist/css/bootstrap.min.css"
@@ -14,7 +14,7 @@
 
     <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
-    <script defer type="module" src="./resources/script/index.js"></script>
+    <script type="module" src="./resources/script/index.js"></script>
   </head>
 
   <body>
@@ -42,9 +42,18 @@
     <div class="container-fluid">
       <div class="text-center">
         <img
-          class="pendu-img mb-5 mt-3"
+          alt="Blue Wall image"
+          id="image-bw"
+          class="pendu-img bg-dark p-2  mt-3"
           src="/resources/images/blue_wall_8.jpg"
         />
+        <div>
+          <a href="/game"><button id="btn-restart" class="btn m-3 btn-primary">Recommencer</button></a>
+      </div>
+        <div>
+          <h5 id="game-count"></h5>
+        </div>
+
         <div
           id="hidden_word"
           class="d-flex justify-content-center text flex-row mb-3"
