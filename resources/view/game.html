@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KC-Pendu</title>
 
+    <link rel="icon" href="./resources/images/kc-logo.png">
+
     <link
       href="/node_modules/bootstrap/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -14,7 +16,7 @@
 
     <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
-    <script type="module" src="./resources/script/index.js"></script>
+    <script type="module" defer src="./resources/script/index.js"></script>
   </head>
 
   <body>
@@ -30,8 +32,8 @@
             </a>
           </div>
 
-          <div class="col-sm">
-            <h1 class="text-center p-4 titre">KC Pendu</h1>
+          <div id="div-title" class="col-sm">
+            <h2 class="text-center p-4 titre">KC Pendu</h2>
           </div>
 
           <div class="col-sm"></div>
@@ -45,10 +47,9 @@
           alt="Blue Wall image"
           id="image-bw"
           class="pendu-img bg-dark p-2  mt-3"
-          src="/resources/images/blue_wall_8.jpg"
         />
         <div>
-          <a href="/game"><button id="btn-restart" class="btn m-3 btn-primary">Recommencer</button></a>
+          <a href="/game"><button id="btn-restart" class="btn btn-sm m-3 btn-primary">Recommencer</button></a>
       </div>
         <div>
           <h5 id="game-count"></h5>
@@ -56,76 +57,17 @@
 
         <div
           id="hidden_word"
-          class="d-flex justify-content-center text flex-row mb-3"
+          class="d-flex justify-content-center text flex-row"
         ></div>
-        <div id="clavier">
-          <div id="first_row">
-            <button id="btn1" class="btn btn-medium border-black btn-light">
-              A</button
-            ><button class="btn btn-medium border-black btn-light" id="btn2">
-              Z</button
-            ><button id="btn3" class="btn btn-medium border-black btn-light">
-              E</button
-            ><button class="btn btn-medium border-black btn-light" id="btn4">
-              R</button
-            ><button id="btn5" class="btn btn-medium border-black btn-light">
-              T</button
-            ><button class="btn btn-medium border-black btn-light" id="btn6">
-              Y</button
-            ><button id="btn7" class="btn btn-medium border-black btn-light">
-              U</button
-            ><button class="btn btn-medium border-black btn-light" id="btn8">
-              I</button
-            ><button id="btn9" class="btn btn-medium border-black btn-light">
-              O</button
-            ><button class="btn btn-medium border-black btn-light" id="btn10">
-              P
-            </button>
-          </div>
-
-          <div id="second_row">
-            <button id="btn11" class="btn btn-medium border-black btn-light">
-              Q</button
-            ><button class="btn btn-medium border-black btn-light" id="btn12">
-              S</button
-            ><button id="btn13" class="btn btn-medium border-black btn-light">
-              D</button
-            ><button class="btn btn-medium border-black btn-light" id="btn14">
-              F</button
-            ><button id="btn15" class="btn btn-medium border-black btn-light">
-              G</button
-            ><button class="btn btn-medium border-black btn-light" id="btn16">
-              H</button
-            ><button id="btn17" class="btn btn-medium border-black btn-light">
-              J</button
-            ><button class="btn btn-medium border-black btn-light" id="btn18">
-              K</button
-            ><button id="btn19" class="btn btn-medium border-black btn-light">
-              L</button
-            ><button class="btn btn-medium border-black btn-light" id="btn20">
-              M
-            </button>
-          </div>
-          <div id="third_row">
-            <button id="btn21" class="btn btn-medium border-black btn-light">
-              W</button
-            ><button class="btn btn-medium border-black btn-light" id="btn22">
-              X</button
-            ><button id="btn23" class="btn btn-medium border-black btn-light">
-              C</button
-            ><button class="btn btn-medium border-black btn-light" id="btn24">
-              V</button
-            ><button id="btn25" class="btn btn-medium border-black btn-light">
-              B</button
-            ><button class="btn btn-medium border-black btn-light" id="btn26">
-              N
-            </button>
-          </div>
+        <div id="keyboard">
         </div>
+
+        <div id="numeric" class="mt-1">
+
+        </div>
+
       </div>
     </div>
 
-    <br />
-    <br />
   </body>
 </html>
