@@ -20,7 +20,7 @@ export const data = {
   12: "Magnum",
   13: "Tomaszy",
   14: "Marteen",
-  15: "Narrate",
+  15: "N4rrate",
   16: "Vatira",
   17: "Rise",
   18: "Atow",

@@ -16,7 +16,7 @@
 
     <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
-    <script type="module" src="./resources/script/index.js"></script>
+    <script type="module" defer src="./resources/script/index.js"></script>
   </head>
 
   <body>
@@ -32,8 +32,8 @@
             </a>
           </div>
 
-          <div class="col-sm">
-            <h1 class="text-center p-4 titre">KC Pendu</h1>
+          <div id="div-title" class="col-sm">
+            <h2 class="text-center p-4 titre">KC Pendu</h2>
           </div>
 
           <div class="col-sm"></div>
@@ -47,10 +47,9 @@
           alt="Blue Wall image"
           id="image-bw"
           class="pendu-img bg-dark p-2  mt-3"
-          src="/resources/images/blue_wall_8.jpg"
         />
         <div>
-          <a href="/game"><button id="btn-restart" class="btn m-3 btn-primary">Recommencer</button></a>
+          <a href="/game"><button id="btn-restart" class="btn btn-sm m-3 btn-primary">Recommencer</button></a>
       </div>
         <div>
           <h5 id="game-count"></h5>
@@ -58,14 +57,17 @@
 
         <div
           id="hidden_word"
-          class="d-flex justify-content-center text flex-row mb-3"
+          class="d-flex justify-content-center text flex-row"
         ></div>
         <div id="keyboard">
         </div>
+
+        <div id="numeric" class="mt-1">
+
+        </div>
+
       </div>
     </div>
 
-    <br />
-    <br />
   </body>
 </html>
