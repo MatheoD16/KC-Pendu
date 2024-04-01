@@ -12,8 +12,6 @@ body {
   min-width: 65px; /* Largeur minimale de l'image */
 }
 
-
-
 .titre {
   font-family: Cairo, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji,
@@ -26,16 +24,16 @@ body {
   font-size: larger;
 }
 
-#numeric{
+#numeric {
   font-size: larger;
 }
 
-.pp-kc{
+.pp-kc {
   width: 150px;
   height: auto;
 }
 
-.github{
+.github {
   height: auto;
   width: 50px;
 }
@@ -44,7 +42,6 @@ body {
   width: 195px;
   height: auto;
 }
-
 
 #hidden_word {
   font-size: 200%;
@@ -65,12 +62,11 @@ body {
     height: auto;
   }
 
-
-  #div-title{
+  #div-title {
     display: none;
   }
 
-  #hidden-row{
+  #hidden-row {
     display: none;
   }
 
