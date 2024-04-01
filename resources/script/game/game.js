@@ -20,7 +20,38 @@ export class Game {
     this.generateHiddenWordInView();
     this.addEventToButton();
     this.displayTries();
+
+    const element = document.getElementById("btn-restart");
+    element.addEventListener("click", this.reload.bind(this));
+
   }
+
+  //Reload
+
+  reload(){
+    this.keyBoard.enableKeyboard();
+    this.clearWord();
+
+    this.hiddenWord = this.RandomHiddenWord();
+    this.tries = 8;
+    this.hiddenLetter = [];
+
+    for (let letter of this.hiddenWord){
+      this.hiddenLetter.push(false);
+    }
+
+    this.generateHiddenWordInView();
+    this.displayTries();
+  }
+
+  clearWord(){
+    const element = document.getElementById("hidden_word");
+    for (let i = 0; i < this.hiddenWord.length; i++) {
+      let child = document.getElementById("char-"+i);
+      element.removeChild(child);
+    }
+  }
+
   //Tries
 
   displayTries(){
@@ -35,7 +66,7 @@ export class Game {
       img.src = "/resources/images/blue_wall_" + this.tries + ".jpg";
 
       if (this.tries <= 0) {
-        element.textContent = "Vous avec perdu ! La personne à trouver était " + this.hiddenWord
+        element.textContent = "Vous avez perdu ! La personne à trouver était " + this.hiddenWord
       } else {
         element.textContent = "Il vous reste " + this.tries + " tentatives";
       }

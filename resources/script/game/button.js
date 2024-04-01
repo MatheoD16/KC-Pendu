@@ -1,12 +1,11 @@
 export class Button {
   id;
   used;
-  inWord;
 
   constructor(id) {
     this.used = false;
     this.id = id;
-    this.inWord = false;
+    //this.inWord = false;
   }
 
   disableRed() {
@@ -21,5 +20,18 @@ export class Button {
     element.classList.remove("btn-light");
     element.classList.add("btn-success");
     this.used = true;
+  }
+
+  enable(){
+    const element = document.getElementById(this.id);
+    if (element.classList.contains("btn-success")){
+      element.classList.remove("btn-success");
+    }
+    else if (element.classList.contains("btn-danger")){
+      element.classList.remove("btn-danger");
+    }
+    element.classList.add("btn-light");
+    this.used = false;
+
   }
 }

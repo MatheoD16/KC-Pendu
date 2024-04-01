@@ -98,4 +98,10 @@ export class Keyboard {
 
   }
 
+  enableKeyboard(){
+    for (let btn of this.listButtons){
+      btn.enable();
+    }
+  }
+
 }
