@@ -12,6 +12,8 @@ body {
   min-width: 65px; /* Largeur minimale de l'image */
 }
 
+
+
 .titre {
   font-family: Cairo, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
     Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji,
@@ -28,6 +30,15 @@ body {
   font-size: larger;
 }
 
+.pp-kc{
+  width: 150px;
+  height: auto;
+}
+
+.github{
+  height: auto;
+  width: 50px;
+}
 
 .pendu-img {
   width: 195px;
