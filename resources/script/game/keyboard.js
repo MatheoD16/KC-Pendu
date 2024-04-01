@@ -1,12 +1,21 @@
 import { Button } from "./button.js";
 import {keyBoardBtn} from "../../../data/data.js";
+
+/**
+ * A class that represents a keyboard
+ *
+ * @author Unknowz
+ */
 export class Keyboard {
+  /**
+   * The list of buttons
+   */
   listButtons;
-  listNumeric;
+
+
 
   constructor() {
     this.listButtons = [];
-    this.listNumeric = [];
 
     this.generateKeyboard();
     this.generateKeyboardList();
@@ -15,6 +24,9 @@ export class Keyboard {
     this.generateNumericList();
   }
 
+  /**
+   * Generate the buttons that represent letters
+   */
   generateKeyboardList(){
     for (let i = 1; i < 27; i++) {
       let btn = new Button("btn" + i);
@@ -22,6 +34,9 @@ export class Keyboard {
     }
   }
 
+  /**
+   * Generate the buttons that represent numbers
+   */
   generateNumericList(){
     for (let i = 0; i <10; i++){
       let btn = new Button("btn-num-"+i);
@@ -29,6 +44,9 @@ export class Keyboard {
     }
   }
 
+  /**
+   * Generate the keyboard for the letters in the view
+   */
   generateKeyboard(){
     let line1 = document.createElement("div");
     line1.id = "first_row";
@@ -60,6 +78,9 @@ export class Keyboard {
     element.appendChild(line3);
   }
 
+  /**
+   * Generate the keyboard for the numbers in the view
+   */
   generateNumeric(){
     let row1 = document.createElement("div");
     row1.id = "row-num-1";
@@ -96,6 +117,15 @@ export class Keyboard {
     element.appendChild(row3);
     element.appendChild(row4);
 
+  }
+
+  /**
+   * Enable all the buttons
+   */
+  enableKeyboard(){
+    for (let btn of this.listButtons){
+      btn.enable();
+    }
   }
 
 }
