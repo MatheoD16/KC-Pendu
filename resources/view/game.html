@@ -5,18 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KC-Pendu</title>
 
-    <link rel="icon" href="./resources/images/kc-logo.png">
+    <link rel="icon" href="resources/images/kc-logo.png" />
 
     <link
-      href="/node_modules/bootstrap/dist/css/bootstrap.min.css"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
 
-    <link href="/resources/style/style.css" rel="stylesheet" />
+    <link href="resources/style/style.css" rel="stylesheet" />
 
-    <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
-    <script type="module" defer src="./resources/script/index.js"></script>
+    <script type="module" defer src="resources/script/index.js"></script>
   </head>
 
   <body>
@@ -46,11 +46,13 @@
         <img
           alt="Blue Wall image"
           id="image-bw"
-          class="pendu-img bg-dark p-2  mt-3"
+          class="pendu-img bg-dark p-2 mt-3"
         />
         <div>
-          <button id="btn-restart" class="btn btn-sm m-3 btn-primary">Recommencer</button>
-      </div>
+          <button id="btn-restart" class="btn btn-sm m-3 btn-primary">
+            Recommencer
+          </button>
+        </div>
         <div>
           <h5 id="game-count"></h5>
         </div>
@@ -59,15 +61,10 @@
           id="hidden_word"
           class="d-flex justify-content-center text flex-row"
         ></div>
-        <div id="keyboard">
-        </div>
+        <div id="keyboard"></div>
 
-        <div id="numeric" class="mt-1">
-
-        </div>
-
+        <div id="numeric" class="mt-1"></div>
       </div>
     </div>
-
   </body>
 </html>

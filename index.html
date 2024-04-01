@@ -5,61 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KC-Pendu</title>
 
-    <link rel="icon" href="./resources/images/kc-logo.png">
+    <link rel="icon" href="resources/images/kc-logo.png" />
 
     <link
-      href="/node_modules/bootstrap/dist/css/bootstrap.min.css"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <link
-      href="/resources/style/style.css"
-      rel="stylesheet"
-    >
-    <script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link href="resources/style/style.css" rel="stylesheet" />
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   </head>
   <body>
     <header class="border border-black text-white rounded-bottom bg-black">
       <div class="container">
         <div class="row">
+          <div class="col-sm div-logo-kc">
+            <a href="/">
+              <img
+                class="rounded m-3 logo-kc"
+                src="resources/images/kc-logo.svg"
+              />
+            </a>
+          </div>
 
-      <div class="col-sm div-logo-kc">
-        <a href="/">
-        <img class="rounded m-3 logo-kc" src="resources/images/kc-logo.svg">
-        </a>
-      </div>
-
-      <div class="col-sm">
-      <h2 class="text-center p-4 titre">KC Pendu</h2>
-      </div>
+          <div class="col-sm">
+            <h2 class="text-center p-4 titre">KC Pendu</h2>
+          </div>
 
           <div id="hidden-row" class="col-sm"></div>
-
         </div>
       </div>
     </header>
 
     <div class="container-fluid">
       <div class="text-center">
-    <h3 class="pt-5 mt-5">Bienvenue sur le jeu du pendu version KC.</h3>
+        <h3 class="pt-5 mt-5">Bienvenue sur le jeu du pendu version KC.</h3>
         <p class="pt-1">⚠️C'est n'est encore qu'une première version⚠️</p>
-    <a href="/game"><button class="btn mt-2 btn-primary">Jouer</button></a>
-    </div>
-    </div>
-
-
-    <div class=" pt-4 mt-4 container-fluid text-center">
-
-      <a href="https://twitter.com/UnknowZbi"><img class="pp-kc p-1 bg-dark" src="/resources/images/pp_KC.png" alt="Unknowz"></a>
-
-    <h4 class="m-3 text-uppercase">Unknowz</h4>
+        <a href="resources/view/game.html"
+          ><button class="btn mt-2 btn-primary">Jouer</button></a
+        >
+      </div>
     </div>
 
-  <footer class="mt-5 pt-2 border-black border rounded-top bg-black container-fluid">
-    <div class=" text-center">
-      <a href="https://github.com/MatheoD16"><img class="github m-2" src="/resources/images/github.png" alt="Mon GitHub"></a>
+    <div class="pt-4 mt-4 container-fluid text-center">
+      <a href="https://twitter.com/UnknowZbi"
+        ><img
+          class="pp-kc p-1 bg-dark"
+          src="resources/images/pp_KC.png"
+          alt="Unknowz"
+      /></a>
 
-      <p class="m-2 p-1">Copyright © Unknowz</p>
+      <h4 class="m-3 text-uppercase">Unknowz</h4>
     </div>
-  </footer>
+
+    <footer
+      class="mt-5 pt-2 border-black border rounded-top bg-black container-fluid"
+    >
+      <div class="text-center">
+        <a href="https://github.com/MatheoD16"
+          ><img
+            class="github m-2"
+            src="resources/images/github.png"
+            alt="Mon GitHub"
+        /></a>
+
+        <p class="m-2 p-1">Copyright © Unknowz</p>
+      </div>
+    </footer>
   </body>
 </html>
