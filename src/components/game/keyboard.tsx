@@ -39,14 +39,14 @@ export default function Keyboard({
 
         if (isInWord){
             onUpdateCharInWord(char);
+        }else{
+            onRemoveTry()
         }
     }
-
 
     const classBtnGray = "btn-keyboard-gray sm:text-sm";
     const classBtnFalse = "btn-keyboard-false sm:text-sm";
     const classBtnTrue = "btn-keyboard-true sm:text-sm";
-
 
     return(
         <>
@@ -59,7 +59,6 @@ export default function Keyboard({
                             onClick={() => {
                                 if (!wordFound && !btn.used && tries > 0){
                                     handleUpdateCharInWord(btn.value)
-                                    onRemoveTry()
                                 }
                             }} 
                             key={btn.value} 

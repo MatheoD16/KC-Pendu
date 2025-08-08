@@ -1,0 +1,10 @@
+{
+    "Play" : "Play",
+    "Welcome to the KC version of Hangman game !" : "Welcome to the KC version of Hangman game !",
+    "Restart" : "Restart",
+    "Congrats you won !" : "Congrats you won !",
+    "You have" : "You have",
+    "try left" : "try left",
+    "tries left" : "tries left",
+    "You lost ! The hidden word was" : "You lost ! The hidden word was"
+}

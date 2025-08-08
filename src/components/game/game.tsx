@@ -4,6 +4,7 @@ import { useEffect, useState } from "react"
 import { checkIfWordFound, NB_TRIES, randomHiddenWord, updateCharInWord } from "@/services/game"
 import { HiddenWordChar } from "@/types/game";
 import Keyboard from "./keyboard";
+import { useTranslation } from "react-i18next";
 
 export default function Game(){
 
@@ -14,6 +15,8 @@ export default function Game(){
     const [wordFound, setWordFound] = useState<boolean>(false);
 
     const [tries, setTries] = useState<number>(NB_TRIES);
+
+    const { t } = useTranslation();
 
     useEffect(() => {
         getHiddenWord();
@@ -78,14 +81,15 @@ export default function Game(){
             </div>       
 
             <div className="flex justify-center my-2">
-                <button className="btn-play" onClick={newGame}>Recommencer</button>
+                <button className="btn-play" onClick={newGame}>{t("Restart")}</button>
             </div>
 
             <p className="text-center text-2xl my-2">
                 {
-                    wordFound ? "Bravo vous avez gagné !​🎉​"
-                    : tries > 0 ? "Il vous reste " + tries + " tentatives"
-                    : "Vous avez perdu ! La personne à trouver était " + hiddenWord
+                    wordFound ? t("Congrats you won !") + "🎉"
+                    : tries > 1? t("You have") + " " + tries + " " + t("tries left")
+                    : tries === 1 ? t("You have") + " " + tries + " " + t("try left")
+                    : t("You lost ! The hidden word was") + " " + hiddenWord
                 }
                 </p> 
 

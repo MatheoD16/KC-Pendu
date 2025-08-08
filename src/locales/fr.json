@@ -1,0 +1,10 @@
+{
+    "Play" : "Jouer",
+    "Welcome to the KC version of Hangman game !" : "Bienvenue sur le jeu du pendu version KC !",
+    "Restart" : "Recommencer",
+    "Congrats you won !" : "Bravo vous avez gagné !",
+    "You have" : "Il vous reste",
+    "try left" : "tentative",
+    "tries left" : "tentatives",
+    "You lost ! The hidden word was" : "Vous avez perdu ! La personne à trouver était"
+}
