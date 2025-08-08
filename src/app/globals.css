@@ -20,7 +20,64 @@
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #0d1015;
+  color: white;
 }
+
+
+.bg-kc {
+  background-color: #0d1015;
+}
+
+.pp-kc{
+  width: 150px;
+  height: auto;
+}
+
+.github{
+  height: auto;
+  width: 50px;
+}
+
+.btn-play{
+  @apply text-base bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300
+         font-medium rounded-lg px-6 py-3 me-2 mb-2
+         dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none
+         dark:focus:ring-blue-800 hover:cursor-pointer;
+}
+
+
+.btn-keyboard-gray{
+  @apply bg-gray-100 hover:bg-gray-400 text-black font-bold
+          m-0.5 border-b-4 hover:border-gray-700 border-gray-500 rounded
+          px-2 py-1                   
+          sm:px-3 sm:py-1.5         
+          md:px-4 md:py-2            
+          lg:px-4 lg:py-2
+          hover:cursor-pointer;
+}
+
+.btn-keyboard-false{
+  @apply  bg-red-400 text-white font-bold
+          m-0.5 border-b-4  border-red-500 rounded
+          px-2 py-1                   
+          sm:px-3 sm:py-1.5         
+          md:px-4 md:py-2            
+          lg:px-4 lg:py-2
+          hover:cursor-pointer;
+}
+
+.btn-keyboard-true{
+  @apply bg-green-400 text-white font-bold
+          m-0.5 border-b-4  border-green-500 rounded
+          px-2 py-1                   
+          sm:px-3 sm:py-1.5         
+          md:px-4 md:py-2            
+          lg:px-4 lg:py-2
+          hover:cursor-pointer;
+}
+
+.game-img {
+    width: 200px;
+    height: auto;
+  }
