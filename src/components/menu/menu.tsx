@@ -15,7 +15,8 @@ export default function Menu(){
                 </div>
             </div>
 
-            <div className="flex justify-center mt-15">
+
+            <div className="flex justify-center mt-7">
                 <a href="/game">
                     <button 
                     type="button"
@@ -26,13 +27,11 @@ export default function Menu(){
                 </a>
             </div>
 
-            <div className="flex justify-center mt-15">
+            <div className="flex justify-center mt-7">
                 <a href="https://twitter.com/UnknowZbi" target="_blanck"><img className="pp-kc p-1 bg-gray-700" src="./pp_KC.png" alt="Unknowz"/></a>
             </div>
 
-            <p className="text-center font-semibold uppercase text-2xl mt-4">Unknowz</p>
-    
-        
+            <p className="text-center font-semibold uppercase text-2xl mt-4">Unknowz</p>    
         
         </>
     )

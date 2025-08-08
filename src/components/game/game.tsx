@@ -76,7 +76,7 @@ export default function Game(){
 
     return(
         <>
-            <div className="flex justify-center mt-30 mb-5">
+            <div className="flex justify-center mt-3 mb-5">
                 <img className="game-img p-2 bg-gray-700" src={wordFound ? "./blue_wall_win.jpg" : urlImage}/>
             </div>       
 
