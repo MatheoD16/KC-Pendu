@@ -1,3 +1,5 @@
+import Image from "next/image"
+
 export default function FooterBar({fixed = false} : {fixed : boolean}){
 
 
@@ -10,7 +12,7 @@ export default function FooterBar({fixed = false} : {fixed : boolean}){
             <footer className={fixed ? styleFixed : styleNotFixed}>
                 <div className=" pt-2 container-fluid">
                     <div className="flex flex-col items-center">
-                    <a href="https://github.com/MatheoD16" target="_blanck"><img className="github m-2" src="./github.png" alt="Mon GitHub"/></a>
+                    <a href="https://github.com/MatheoD16" target="_blanck"><Image className="github m-2" src="/github.png" alt="Mon GitHub" width={50} height={0}/></a>
                     </div>
 
                     <p className="m-2 p-1 text-center">Copyright © Unknowz</p>
