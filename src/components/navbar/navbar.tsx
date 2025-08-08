@@ -3,9 +3,7 @@
 import { useTranslation } from "react-i18next"
 
 export default function Navbar(){
-//TODO Changer l'icone et le titre de la page
-//TODO Deploy
-
+  
     const { t } = useTranslation();
 
     return(
