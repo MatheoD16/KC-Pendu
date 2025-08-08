@@ -1,6 +1,6 @@
 "use client"
 
-import { useCallback, useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import { checkIfWordFound, NB_TRIES, randomHiddenWord, updateCharInWord } from "@/services/game"
 import { HiddenWordChar } from "@/types/game";
 import Keyboard from "./keyboard";
@@ -38,20 +38,18 @@ export default function Game(){
     }
 
 
-    const hiddenWordToTab = useCallback(() => {
-        const tab: HiddenWordChar[] = [];
+    function hiddenWordToTab(){
+        const tab : HiddenWordChar[] = [];
         const hiddenTab = hiddenWord.split("");
-
         hiddenTab.forEach(char => {
             const obj = {
-            char: char,
-            found: false
-            };
+                "char" : char,
+                "found" : false
+            }
             tab.push(obj);
-        });
-
+        })
         setHiddenWordChars(tab);
-        }, [hiddenWord]);
+    }
 
 
     function handleUpdateCharInWord(char : string){
