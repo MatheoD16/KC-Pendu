@@ -103,7 +103,7 @@ export function checkIfWordFound(hiddenWordChars : HiddenWordChar[]) : boolean{
     if (hiddenWordChars.length === 0){
         return false
     }
-    for (let char of hiddenWordChars){
+    for (const char of hiddenWordChars){
         if (! char.found){
             return false
         }

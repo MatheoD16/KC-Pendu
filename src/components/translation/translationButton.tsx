@@ -1,6 +1,7 @@
 "use client"
 
 import i18n from "@/i18n";
+import Image from "next/image";
 
 export default function TranslationButton(){
 
@@ -12,11 +13,19 @@ export default function TranslationButton(){
         <>
             
             <button className="mx-1 flag hover:cursor-pointer" onClick={() => switchLanguage('fr')}>
-                <img src={"./france_flag.png"}/>
+                <Image src={"./france_flag.png"}
+                       alt="France flag" 
+                       width={50}
+                       height={0}
+                />
             </button>
             
             <button className="mx-2 flag hover:cursor-pointer" onClick={() => switchLanguage('en')}>
-                <img src={"./uk_flag.jpg"}/>
+                <Image src={"./uk_flag.jpg"}
+                       alt="UK flag"
+                       width={50}
+                       height={0} 
+                />
             </button>
         
         </>

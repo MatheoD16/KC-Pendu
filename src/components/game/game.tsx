@@ -5,6 +5,7 @@ import { checkIfWordFound, NB_TRIES, randomHiddenWord, updateCharInWord } from "
 import { HiddenWordChar } from "@/types/game";
 import Keyboard from "./keyboard";
 import { useTranslation } from "react-i18next";
+import Image from "next/image";
 
 export default function Game(){
 
@@ -23,7 +24,16 @@ export default function Game(){
     }, [])
 
     useEffect(() => {
-        hiddenWordToTab();
+        const tab : HiddenWordChar[] = [];
+        const hiddenTab = hiddenWord.split("");
+        hiddenTab.forEach(char => {
+            const obj = {
+                "char" : char,
+                "found" : false
+            }
+            tab.push(obj);
+        })
+        setHiddenWordChars(tab);
     }, [hiddenWord]);
 
     useEffect(() => {
@@ -35,20 +45,6 @@ export default function Game(){
 
     function getHiddenWord(){
         setHiddenWord(randomHiddenWord());
-    }
-
-
-    function hiddenWordToTab(){
-        const tab : HiddenWordChar[] = [];
-        const hiddenTab = hiddenWord.split("");
-        hiddenTab.forEach(char => {
-            const obj = {
-                "char" : char,
-                "found" : false
-            }
-            tab.push(obj);
-        })
-        setHiddenWordChars(tab);
     }
 
 
@@ -77,7 +73,12 @@ export default function Game(){
     return(
         <>
             <div className="flex justify-center mt-3 mb-5">
-                <img className="game-img p-2 bg-gray-700" src={wordFound ? "./blue_wall_win.jpg" : urlImage}/>
+                <Image className="game-img p-2 bg-gray-700"
+                        src={wordFound ? "./blue_wall_win.jpg" : urlImage}
+                        alt="Blue wall picture"
+                        width={50}
+                        height={0}
+                 />
             </div>       
 
             <div className="flex justify-center my-2">

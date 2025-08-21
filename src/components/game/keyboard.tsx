@@ -9,7 +9,7 @@ export default function Keyboard({
                                     hiddenWord,
                                     wordFound,
                                     tries,
-                                    onUpdateCharInWord = (char : string) => {return},
+                                    onUpdateCharInWord = (char : string) => {return char},
                                     onRemoveTry = () => {return}
                                 } : KeyboardProps){
 
