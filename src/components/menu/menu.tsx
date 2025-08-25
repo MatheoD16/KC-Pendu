@@ -31,7 +31,7 @@ export default function Menu(){
             <div className="flex justify-center mt-7">
                 <a href="https://twitter.com/UnknowZbi" target="_blanck">
                     <Image className="pp-kc p-1 bg-gray-700"
-                           src="./pp_KC.png"
+                           src="/pp_KC.png"
                            alt="Unknowz"
                            height={0}
                            width={50}/>

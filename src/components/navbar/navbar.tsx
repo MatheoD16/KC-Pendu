@@ -16,7 +16,7 @@ export default function Navbar(){
               <Link href="/">
                 <Image
                   className="rounded w-16 h-auto"
-                  src="./kc-logo.png"
+                  src="/kc-logo.png"
                   alt="KC Logo"
                   height={0}
                   width={50}

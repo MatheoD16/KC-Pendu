@@ -68,13 +68,13 @@ export default function Game(){
     }
 
 
-    const urlImage = "./blue_wall_"+tries+".jpg";
+    const urlImage = "/blue_wall_"+tries+".jpg";
 
     return(
         <>
             <div className="flex justify-center mt-3 mb-5">
                 <Image className="game-img p-2 bg-gray-700"
-                        src={wordFound ? "./blue_wall_win.jpg" : urlImage}
+                        src={wordFound ? "/blue_wall_win.jpg" : urlImage}
                         alt="Blue wall picture"
                         width={50}
                         height={0}

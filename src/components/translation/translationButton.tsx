@@ -13,7 +13,7 @@ export default function TranslationButton(){
         <>
             
             <button className="mx-1 flag hover:cursor-pointer" onClick={() => switchLanguage('fr')}>
-                <Image src={"./france_flag.png"}
+                <Image src={"/france_flag.png"}
                        alt="France flag" 
                        width={50}
                        height={0}
@@ -21,7 +21,7 @@ export default function TranslationButton(){
             </button>
             
             <button className="mx-2 flag hover:cursor-pointer" onClick={() => switchLanguage('en')}>
-                <Image src={"./uk_flag.jpg"}
+                <Image src={"/uk_flag.jpg"}
                        alt="UK flag"
                        width={50}
                        height={0} 
